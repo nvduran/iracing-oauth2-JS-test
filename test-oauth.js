@@ -22,9 +22,9 @@ require("dotenv").config();
                 if (missing.length > 0) {
                         console.error("❌ Missing required environment variables:", missing.join(", "));
                         console.log("\nYour .env file should contain:");
-                        console.log("IR_USERNAME=nvduran@gmail.com");
+                        console.log("IR_USERNAME= ir username here");
                         console.log("IR_PASSWORD=your_password");
-                        console.log("IR_OAUTH_CLIENT_ID=iracingdatacom");
+                        console.log("IR_OAUTH_CLIENT_ID=oauth client here");
                         console.log("IR_OAUTH_SECRET=your_oauth_secret");
                         process.exit(1);
                 }
