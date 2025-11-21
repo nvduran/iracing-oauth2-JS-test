@@ -20,7 +20,7 @@ require("dotenv").config();
                 const missing = requiredVars.filter((v) => !process.env[v]);
 
                 if (missing.length > 0) {
-                        console.error("❌ Missing required environment variables:", missing.join(", "));
+                        console.error(" Missing required environment variables:", missing.join(", "));
                         console.log("\nYour .env file should contain:");
                         console.log("IR_USERNAME= ir username here");
                         console.log("IR_PASSWORD=your_password");
@@ -49,7 +49,8 @@ require("dotenv").config();
                 );
 
                 if (!response.ok) {
-                        console.error(`❌ API call failed: ${response.status} ${response.statusText}`);
+                        console.error(`
+                        API call failed: ${response.status} ${response.statusText}`);
                         const text = await response.text();
                         console.error("   Response:", text);
                         process.exit(1);
@@ -64,7 +65,7 @@ require("dotenv").config();
                 const seasonResponse = await authenticatedFetch("https://members-ng.iracing.com/data/series/seasons");
 
                 if (!seasonResponse.ok) {
-                        console.error(`❌ Season API call failed: ${seasonResponse.status}`);
+                        console.error(`Season API call failed: ${seasonResponse.status}`);
                         process.exit(1);
                 }
 
@@ -83,7 +84,7 @@ require("dotenv").config();
                 console.log("\n");
                 process.exit(0);
         } catch (error) {
-                console.error("\n❌ Error during OAuth test:");
+                console.error("\n Error during OAuth test:");
                 console.error(error);
                 console.log("\nTroubleshooting:");
                 console.log("1. Check your .env file has correct credentials");
