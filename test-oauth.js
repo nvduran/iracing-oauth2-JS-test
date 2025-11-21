@@ -2,7 +2,7 @@
  * OAuth2 Test Script
  *
  * Run this to verify your OAuth2 setup is working correctly
- * Usage: node test-oauth.js
+ * 
  */
 
 const { initializeOAuth, authenticatedFetch, getValidAccessToken } = require("./utils/oauth");
@@ -77,9 +77,9 @@ require("dotenv").config();
                 console.log("✓ All tests passed! OAuth2 is working correctly.");
                 console.log("=".repeat(60));
                 console.log("\nYou can now:");
-                console.log("1. Start your server: npm start");
+                
                 console.log("2. Run your tools with OAuth2 authentication");
-                console.log("3. Migrate remaining files using OAUTH_MIGRATION.md guide");
+        
                 console.log("\n");
                 process.exit(0);
         } catch (error) {
